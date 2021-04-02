@@ -73,23 +73,28 @@ const ProductContainer = () => {
               
 
         ) : (
+            
             console.log('FALSE FOCUS!!!'),
-            // <View style={styles.container}>
             <View>
-            {/* <Banner /> */}
-                    <View style={{ marginTop: 100}}>
-                    <FlatList 
-                        // horizontal
-                        data={products}
-                        renderItem={({item})=> (
-                            //console.log('FALSE FOCUS!!!');
-                        <ProductList 
-                            key={item.id}
-                            item={item}
-                        />)}
-                        keyExtractor={item => item.name}
-                    />
+
+                <View>
+                    <Banner />
                 </View>
+
+                <View style={{ marginTop: 100}}>
+                <FlatList 
+                    // horizontal
+                    data={products}
+                    renderItem={({item})=> (
+                        //console.log('FALSE FOCUS!!!');
+                    <ProductList 
+                        key={item.id}
+                        item={item}
+                    />)}
+                    keyExtractor={item => item.name}
+                />
+                </View>
+
             </View>     
         )}
 
